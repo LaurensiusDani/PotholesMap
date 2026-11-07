@@ -29,7 +29,7 @@ Allowed issue states: `not_started`, `in_progress`, `blocked`, `in_review`, `don
 | Issue | Dependencies | State | Evidence / blocker |
 |---|---|---|---|
 | M0-01 | None | done | [PR #2](https://github.com/LaurensiusDani/PotholesMap/pull/2) squash-merged by explicit authorization as `1facfab`; issue #1 closed; settings/GFM/template registration verified; browser README inspected; signed-in chooser limitation disclosed in runbook |
-| M0-02 | M0-01 | in_review | [Issue #3](https://github.com/LaurensiusDani/PotholesMap/issues/3); agent contract refined, scenario review and bounded workflow documented; PR/review evidence in agent review runbook |
+| M0-02 | M0-01 | in_review | [Issue #3](https://github.com/LaurensiusDani/PotholesMap/issues/3), [PR #4](https://github.com/LaurensiusDani/PotholesMap/pull/4); agent contract, 12 scenarios and local documentation checks complete; maintainer review/merge pending |
 | M0-03 | M0-01, M0-02 | not_started | Await runtime spike |
 | M0-04 | M0-03 core-hosting go decision | not_started | Await approved spike outcome |
 | M0-05 | M0-04 | not_started | Await bootstrap |
