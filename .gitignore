@@ -1,0 +1,40 @@
+# Dependencies, builds and test artifacts (introduced in later milestones).
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+# Secrets and local runtime state. Track examples and SQL migrations.
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.wrangler/
+supabase/.temp/
+supabase/.branches/
+*.pem
+*.key
+
+# Private/local exports, user uploads and temporary output.
+/backups/
+/uploads/
+/private/
+/tmp/
+*.dump
+*.sql.gz
+*.log
+graphify-out/
+
+# Machine/editor state.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
