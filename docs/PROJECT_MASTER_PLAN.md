@@ -1,6 +1,6 @@
 # PotholeMap — Project Master Plan
 
-**Version:** 1.4 · **Updated:** 2026-11-04 · **Status:** Planning baseline; implementation not verified.
+**Version:** 1.5 · **Updated:** 2026-11-07 · **Status:** Planning baseline; M0 governance in review, product implementation not verified.
 
 **Goal:** Publicly launch a secure, mobile-first, crowdsourced pothole reporting map with **Rp0 initial infrastructure budget**.
 
@@ -28,7 +28,7 @@ This document defines product scope, architecture, backend boundaries, global re
 7. Record unexpected dependencies and revise the appropriate plan before adding implementation scope. Do not import later features to finish a current demo.
 8. Existing user authorization governs external actions. A planning task does not authorize merging, deployment, production-data/secret changes or paid services.
 
-**Current state:** M0 is not verified complete; selected-issue status and evidence live in the M0 ledger. The root agent contract has been prepared under the user's limited M0-02 documentation request. At the user's request, all M1–M13 contracts are now drafted for forward planning; they remain blocked for implementation until prerequisite review and user activation. Planning checklists are not evidence of existing infrastructure.
+**Current state:** M0-01 governance is prepared for review in the public LaurensiusDani/PotholesMap repository; MIT was selected by the maintainer on 2026-11-07. M0 is not verified complete; selected-issue evidence lives in its ledger/runbook. The earlier M0-02 agent contract remains in review. All M1–M13 contracts are drafted for forward planning and remain blocked until prerequisite review/user activation. No app, CI, database or cloud deployment is claimed by repository creation.
 
 ## 2. Product and MVP boundaries
 
@@ -230,7 +230,7 @@ Cloudflare Queues currently has a free allowance; cost alone is not the reason t
 
 ## 9. Engineering, environments and operations
 
-One issue → short-lived branch → focused PR → checks + self-review/manual verification → squash merge. Protected, production-ready main; no force push/delete, no long-lived develop branch. Conventional Commits. Public visibility is decided; code license and submitted-image rights remain open.
+One issue → short-lived branch → focused PR → checks + self-review/manual verification → squash merge. Target: protected, production-ready main; no force push/delete, no long-lived develop branch. Actual protection is implemented/verified in M0-08, not inferred from this plan. Conventional Commits. Public visibility and MIT source license are decided; submitted-image/brand rights policy remains open.
 
 PR completion requires acceptance criteria, relevant tests, lint/typecheck/build, no leaked secrets, migration safety if applicable, updated docs/env examples and preview verification for UI changes. No invented evidence or unrelated packages.
 
@@ -255,7 +255,7 @@ Minimum dependencies are not permission to jump ahead. Default order is M0 → M
 
 | Milestone | Deliverable / backend ownership | Minimum prerequisite | Exit gate | State |
 |---|---|---|---|---|
-| [M0 Engineering Foundation](milestones/M0_ENGINEERING_FOUNDATION.md) | Governance, spike, bootstrap, CI/CD, environments | None | Reproducible setup; CI, isolated preview, harmless production and rollback evidence | M0-02 artifact in review; milestone not complete |
+| [M0 Engineering Foundation](milestones/M0_ENGINEERING_FOUNDATION.md) | Governance, spike, bootstrap, CI/CD, environments | None | Reproducible setup; CI, isolated preview, harmless production and rollback evidence | M0-01 governance in review; milestone not complete |
 | [M1 Application Shell](milestones/M1_APPLICATION_SHELL.md) | Responsive routing, layout, accessibility primitives | M0 signoff | Mobile/desktop shell; no live reporting | Drafted; blocked for implementation |
 | [M2 Database Foundation](milestones/M2_DATABASE_FOUNDATION.md) | Schema, PostGIS, migrations, grants/RLS, SQL/RPC and fixtures | M0 signoff; M1 in default order | Reproducible DB; direct-access permission tests | Drafted; blocked for implementation |
 | [M3 Map Foundation](milestones/M3_MAP_FOUNDATION.md) | Tiles, map, GPS/manual pin | M1 | Compliant provider; location-denial flow works | Drafted; blocked for implementation |
@@ -287,11 +287,11 @@ Issue details/tracking live only in their individual [milestone contracts](miles
 
 ## 12. Decision register and risks
 
-**Agreed planning baseline:** PotholeMap; Indonesian-first public map; public GitHub; anonymous reporting; admin-only accounts; prepublication moderation; Rp0 start; React/Vite/TypeScript + Workers proposal; Supabase; pnpm; GitHub Actions; modular monolith; no broker by default; 14 milestones with issue-sized delivery. These are not claims of completed setup.
+**Agreed planning baseline:** PotholeMap; Indonesian-first public map; public GitHub; MIT source license (maintainer decision 2026-11-07); anonymous reporting; admin-only accounts; prepublication moderation; Rp0 start; React/Vite/TypeScript + Workers proposal; Supabase; pnpm; GitHub Actions; modular monolith; no broker by default; 14 milestones with issue-sized delivery. These are not claims of completed application setup.
 
 | Open decision | Resolve by | Required outcome |
 |---|---|---|
-| Code license / user-image rights | M0-01 / before M13 | Maintainer selection, not assumed MIT |
+| User-image and brand rights policy | Before M13 | Separate from MIT source license selected in M0-01 |
 | Hosting/runtime viability | M0-03 | ADR-001 and measured spike |
 | Safe image runtime and exact limits | Feasibility M0-03; proof M6 | No public intake until solved |
 | Local/preview setup and actual GitHub gates | M0-08–M0-11 | Account-specific isolation/protection evidence |
