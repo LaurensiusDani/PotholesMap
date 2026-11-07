@@ -1,0 +1,213 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram id="G6jeuVhuccF8OP7fGeLj" name="HL System Design">
+    <mxGraphModel dx="1494" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=center;" value="PotholeMap — High-Level System Design" vertex="1">
+          <mxGeometry height="35" width="800" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="clients" parent="1" style="swimlane;html=1;startSize=28;fillColor=#f5f5f5;strokeColor=#b1b1b1;fontSize=14;fontStyle=1;" value="CLIENTS" vertex="1">
+          <mxGeometry height="110" width="790" x="40" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="3oxVyt8Ui0koE6t-leyv-1" edge="1" parent="1" source="app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="edge" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="app" parent="1" style="swimlane;html=1;startSize=28;fillColor=#f5f5f5;strokeColor=#b1b1b1;fontSize=14;fontStyle=1;" value="APPLICATION (MODULAR MONOLITH)" vertex="1">
+          <mxGeometry height="150" width="790" x="40" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="data" parent="1" style="swimlane;html=1;startSize=28;fillColor=#f5f5f5;strokeColor=#b1b1b1;fontSize=14;fontStyle=1;" value="SUPABASE FREE MANAGED DATA" vertex="1">
+          <mxGeometry height="150" width="790" x="40" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="visitor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Public Visitor / Browser" vertex="1">
+          <mxGeometry height="50" width="215" x="90" y="121" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Admin Browser" vertex="1">
+          <mxGeometry height="50" width="215" x="555" y="121" as="geometry" />
+        </mxCell>
+        <mxCell id="edge" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Cloudflare Workers Free: HTTPS Edge" vertex="1">
+          <mxGeometry height="55" width="430" x="220" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Map UI and Report Form" vertex="1">
+          <mxGeometry height="63" width="220" x="80" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Public/Admin API" vertex="1">
+          <mxGeometry height="63" width="205" x="328" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="controls" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Validation, Turnstile, RBAC" vertex="1">
+          <mxGeometry height="63" width="220" x="560" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" value="PostgreSQL + PostGIS" vertex="1">
+          <mxGeometry height="61" width="220" x="80" y="542" as="geometry" />
+        </mxCell>
+        <mxCell id="storage" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" value="Private Photo Storage" vertex="1">
+          <mxGeometry height="61" width="205" x="328" y="542" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Supabase Admin Auth" vertex="1">
+          <mxGeometry height="61" width="220" x="560" y="542" as="geometry" />
+        </mxCell>
+        <mxCell id="tiles" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Compliant Map Tile Provider" vertex="1">
+          <mxGeometry height="54" width="300" x="85" y="692" as="geometry" />
+        </mxCell>
+        <mxCell id="cicd" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" value="GitHub Actions + Gated Deploy" vertex="1">
+          <mxGeometry height="54" width="340" x="440" y="692" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="visitor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="edge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="admin" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="edge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="edge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="ui">
+          <mxGeometry relative="1" x="-0.1594" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="310" />
+              <mxPoint x="190" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="edge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="435" y="350" />
+              <mxPoint x="435" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="db">
+          <mxGeometry relative="1" x="0.0303" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="460" />
+              <mxPoint x="240" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="storage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="controls" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="ui" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;dashed=1;" target="tiles">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="396.5" />
+              <mxPoint x="60" y="719" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="cicd" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;dashed=1;" target="edge">
+          <mxGeometry relative="1" x="0.1052" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="719" />
+              <mxPoint x="810" y="310" />
+              <mxPoint x="490" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="hxnp0cx7IiF2d4WBwwNc" name="LL System Design">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-1" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=center;" value="PotholeMap — Low-Level Component Design" vertex="1">
+          <mxGeometry height="35" width="800" x="40" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-2" parent="1" style="swimlane;html=1;startSize=28;fillColor=#f5f5f5;strokeColor=#b1b1b1;fontSize=14;fontStyle=1;" value="BROWSER" vertex="1">
+          <mxGeometry height="111" width="790" x="40" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-3" parent="1" style="swimlane;html=1;startSize=28;fillColor=#f5f5f5;strokeColor=#b1b1b1;fontSize=14;fontStyle=1;" value="WORKERS: WEB/API MODULES" vertex="1">
+          <mxGeometry height="230" width="790" x="40" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-4" parent="1" style="swimlane;html=1;startSize=28;fillColor=#f5f5f5;strokeColor=#b1b1b1;fontSize=14;fontStyle=1;" value="SUPABASE FREE" vertex="1">
+          <mxGeometry height="150" width="790" x="40" y="492" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Map + Detail UI" vertex="1">
+          <mxGeometry height="50" width="220" x="78" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Photo / Location Form" vertex="1">
+          <mxGeometry height="50" width="220" x="333" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Admin Review UI" vertex="1">
+          <mxGeometry height="50" width="220" x="588" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="GET /api/reports" vertex="1">
+          <mxGeometry height="52" width="220" x="78" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="POST /api/reports" vertex="1">
+          <mxGeometry height="52" width="220" x="333" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" value="PATCH /api/admin/*" vertex="1">
+          <mxGeometry height="52" width="220" x="588" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="BBox validator / Geo Query" vertex="1">
+          <mxGeometry height="60" width="220" x="78" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Turnstile + Secure Image Pipeline" vertex="1">
+          <mxGeometry height="60" width="220" x="333" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Session + Admin Role Guard" vertex="1">
+          <mxGeometry height="60" width="220" x="588" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" value="Reports + Events + PostGIS" vertex="1">
+          <mxGeometry height="60" width="220" x="78" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;" value="Sanitized Images (Private)" vertex="1">
+          <mxGeometry height="60" width="220" x="333" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Supabase Auth/Admin Profiles" vertex="1">
+          <mxGeometry height="60" width="220" x="588" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" value="Pending by default; publish only approved records; audit admin changes" vertex="1">
+          <mxGeometry height="50" width="650" x="150" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-18" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-19" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-20" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-21" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-22" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-23" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-24" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-25" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-14">
+          <mxGeometry relative="1" x="-0.0338" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="430" />
+              <mxPoint x="210" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-26" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-27" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-14">
+          <mxGeometry relative="1" x="-0.0092" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="460" />
+              <mxPoint x="230" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yoaQ2PTQl6zHG8QlibGA-28" edge="1" parent="1" source="yoaQ2PTQl6zHG8QlibGA-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#758797;" target="yoaQ2PTQl6zHG8QlibGA-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
