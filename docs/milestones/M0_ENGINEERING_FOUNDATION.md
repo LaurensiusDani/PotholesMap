@@ -28,7 +28,7 @@ Allowed issue states: `not_started`, `in_progress`, `blocked`, `in_review`, `don
 
 | Issue | Dependencies | State | Evidence / blocker |
 |---|---|---|---|
-| M0-01 | None | in_review | Public repo and [issue #1](https://github.com/LaurensiusDani/PotholesMap/issues/1); MIT selected, governance files/local checks prepared; see repository runbook; PR/default-branch template review pending |
+| M0-01 | None | in_review | Public repo, [issue #1](https://github.com/LaurensiusDani/PotholesMap/issues/1) and [PR #2](https://github.com/LaurensiusDani/PotholesMap/pull/2); MIT selected; local/GitHub GFM/settings checks passed; maintainer/default-branch template review pending |
 | M0-02 | M0-01 (default; limited exception below) | in_review | Root `AGENTS.md` prepared at user's explicit request; local documentation checks recorded below; governance and remote PR evidence remain outstanding |
 | M0-03 | M0-01, M0-02 | not_started | Await runtime spike |
 | M0-04 | M0-03 core-hosting go decision | not_started | Await approved spike outcome |

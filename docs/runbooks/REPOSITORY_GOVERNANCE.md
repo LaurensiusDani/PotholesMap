@@ -44,4 +44,4 @@ Check local Markdown/links/template frontmatter, final newlines, ignore examples
 - Ignore samples: env/runtime secrets, dependencies/builds, backup/upload objects and local Supabase state ignored; `.env.example`, `.dev.vars.example`, SQL migrations and README remain trackable.
 - Remote API: public visibility, default `main`, issues enabled, wiki disabled and private vulnerability reporting enabled verified. No required checks/main protection/CI/deployment is claimed.
 
-**Governance PR:** Pending creation. **Result:** Prepared for review, not verified complete. Templates will only become the default issue/PR experience after an authorized merge to `main`; the chooser/manual rendering check remains outstanding. No merge or later issue is automatically started.
+**Governance PR:** [M0-01 / #2](https://github.com/LaurensiusDani/PotholesMap/pull/2), branch `chore/m0-01-repository-governance`, base `main`. **Result:** Prepared for review, not verified complete. Templates will only become the default issue/PR experience after an authorized merge to `main`; the chooser/manual visual check remains outstanding. No merge or later issue is automatically started.
