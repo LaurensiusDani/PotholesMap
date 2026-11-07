@@ -1,6 +1,6 @@
 # PotholeMap — Project Master Plan
 
-**Version:** 1.5 · **Updated:** 2026-11-07 · **Status:** Planning baseline; M0 governance in review, product implementation not verified.
+**Version:** 1.6 · **Updated:** 2026-11-07 · **Status:** M0-01 governance complete; M0-02 in review; product implementation not verified.
 
 **Goal:** Publicly launch a secure, mobile-first, crowdsourced pothole reporting map with **Rp0 initial infrastructure budget**.
 
@@ -28,7 +28,7 @@ This document defines product scope, architecture, backend boundaries, global re
 7. Record unexpected dependencies and revise the appropriate plan before adding implementation scope. Do not import later features to finish a current demo.
 8. Existing user authorization governs external actions. A planning task does not authorize merging, deployment, production-data/secret changes or paid services.
 
-**Current state:** M0-01 governance is prepared for review in the public LaurensiusDani/PotholesMap repository; MIT was selected by the maintainer on 2026-11-07. M0 is not verified complete; selected-issue evidence lives in its ledger/runbook. The earlier M0-02 agent contract remains in review. All M1–M13 contracts are drafted for forward planning and remain blocked until prerequisite review/user activation. No app, CI, database or cloud deployment is claimed by repository creation.
+**Current state:** M0-01 governance is complete: PR #2 merged with maintainer authorization, MIT selected and repository/template evidence recorded. M0-02 refines the agent contract on a separate review branch. M0 is not verified complete; selected-issue evidence lives in its ledger/runbooks. All M1–M13 remain drafted and blocked until prerequisite review/user activation. No app, CI, database or cloud deployment is claimed by governance completion.
 
 ## 2. Product and MVP boundaries
 
@@ -255,7 +255,7 @@ Minimum dependencies are not permission to jump ahead. Default order is M0 → M
 
 | Milestone | Deliverable / backend ownership | Minimum prerequisite | Exit gate | State |
 |---|---|---|---|---|
-| [M0 Engineering Foundation](milestones/M0_ENGINEERING_FOUNDATION.md) | Governance, spike, bootstrap, CI/CD, environments | None | Reproducible setup; CI, isolated preview, harmless production and rollback evidence | M0-01 governance in review; milestone not complete |
+| [M0 Engineering Foundation](milestones/M0_ENGINEERING_FOUNDATION.md) | Governance, spike, bootstrap, CI/CD, environments | None | Reproducible setup; CI, isolated preview, harmless production and rollback evidence | M0-01 done; M0-02 in review; milestone not complete |
 | [M1 Application Shell](milestones/M1_APPLICATION_SHELL.md) | Responsive routing, layout, accessibility primitives | M0 signoff | Mobile/desktop shell; no live reporting | Drafted; blocked for implementation |
 | [M2 Database Foundation](milestones/M2_DATABASE_FOUNDATION.md) | Schema, PostGIS, migrations, grants/RLS, SQL/RPC and fixtures | M0 signoff; M1 in default order | Reproducible DB; direct-access permission tests | Drafted; blocked for implementation |
 | [M3 Map Foundation](milestones/M3_MAP_FOUNDATION.md) | Tiles, map, GPS/manual pin | M1 | Compliant provider; location-denial flow works | Drafted; blocked for implementation |
