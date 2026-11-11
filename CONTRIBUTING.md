@@ -2,6 +2,8 @@
 
 PotholeMap is under development. Start with the [master plan](docs/PROJECT_MASTER_PLAN.md), [execution index](docs/milestones/README.md), selected milestone contract and [agent instructions](AGENTS.md). Do not implement the roadmap as one change.
 
+Agent contributors should also follow the [reviewed scoped-workflow scenarios](docs/runbooks/AGENT_CONTRACT_REVIEW.md). This is a review aid; current task status stays in the milestone ledger.
+
 ## Choose one scoped issue
 
 - Confirm the issue objective, prerequisite evidence, acceptance criteria and exclusions before implementation.

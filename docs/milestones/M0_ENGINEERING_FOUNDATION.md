@@ -1,6 +1,6 @@
 # PotholeMap — M0 Engineering Foundation
 
-**Version:** 1.5 · **Updated:** 2026-11-07 · **Status:** M0-01 governance prepared for review; milestone not verified complete.
+**Version:** 1.6 · **Updated:** 2026-11-07 · **Status:** M0-01 complete; M0-02 contract in review; milestone not verified complete.
 
 **Parent:** [Project Master Plan](../PROJECT_MASTER_PLAN.md) · **Shared contract/index:** [Execution index](README.md) · **Next:** [M1](M1_APPLICATION_SHELL.md). Product scope, backend architecture and the M0–M13 roadmap belong in the master; this document owns **only M0 execution**. New M1–M13 drafts do not change this ledger's evidence or activate implementation.
 
@@ -28,8 +28,8 @@ Allowed issue states: `not_started`, `in_progress`, `blocked`, `in_review`, `don
 
 | Issue | Dependencies | State | Evidence / blocker |
 |---|---|---|---|
-| M0-01 | None | in_review | Public repo, [issue #1](https://github.com/LaurensiusDani/PotholesMap/issues/1) and [PR #2](https://github.com/LaurensiusDani/PotholesMap/pull/2); MIT selected; local/GitHub GFM/settings checks passed; maintainer/default-branch template review pending |
-| M0-02 | M0-01 (default; limited exception below) | in_review | Root `AGENTS.md` prepared at user's explicit request; local documentation checks recorded below; governance and remote PR evidence remain outstanding |
+| M0-01 | None | done | [PR #2](https://github.com/LaurensiusDani/PotholesMap/pull/2) squash-merged by explicit authorization as `1facfab`; issue #1 closed; settings/GFM/template registration verified; browser README inspected; signed-in chooser limitation disclosed in runbook |
+| M0-02 | M0-01 | in_review | [Issue #3](https://github.com/LaurensiusDani/PotholesMap/issues/3), [PR #4](https://github.com/LaurensiusDani/PotholesMap/pull/4); agent contract, 12 scenarios and local documentation checks complete; maintainer review/merge pending |
 | M0-03 | M0-01, M0-02 | not_started | Await runtime spike |
 | M0-04 | M0-03 core-hosting go decision | not_started | Await approved spike outcome |
 | M0-05 | M0-04 | not_started | Await bootstrap |
@@ -41,9 +41,9 @@ Allowed issue states: `not_started`, `in_progress`, `blocked`, `in_review`, `don
 | M0-11 | M0-08, M0-09, M0-10 | not_started | Await gates and preview evidence |
 | M0-12 | M0-01–M0-11 | not_started | Await final audit |
 
-**Selected issue:** M0-01 — repository governance, authorized on 2026-11-07. M0-02's earlier artifact remains in review; no later issue is started. **M0 exit signoff:** Not recorded. **Next milestone:** M1 remains blocked.
+**Selected issue:** M0-02 — AI agent contract, authorized after squash-merge of PR #2 on 2026-11-07. No later issue is started. **M0 exit signoff:** Not recorded. **Next milestone:** M1 remains blocked.
 
-**User-directed sequencing exception — 2026-11-04:** The maintainer explicitly requested `AGENTS.md` setup before M0-01 governance. Prepare this independent documentation artifact now; retain M0-01 as incomplete and the default dependency for normal execution. This does not authorize repository initialization, remote setup, runtime work or any later issue.
+**Historical sequencing exception — 2026-11-04:** The maintainer requested an independent AGENTS draft before M0-01. That limited exception authorized documentation only. M0-01 has now been completed and the normal M0-02 dependency is satisfied; the earlier exception does not activate any later issue.
 
 ## 2. Shared engineering contracts
 
@@ -304,9 +304,11 @@ Issue handoff:
 
 **Evidence index:**
 
-- **M0-01 governance (2026-11-07):** Public [LaurensiusDani/PotholesMap](https://github.com/LaurensiusDani/PotholesMap), [issue #1](https://github.com/LaurensiusDani/PotholesMap/issues/1), explicit maintainer MIT selection, README/CONTRIBUTING/SECURITY/LICENSE, issue/PR templates and ignore/editor/line-ending rules. Planning-only seed commit `38459dd` establishes the empty repository's `main` base; topic branch `chore/m0-01-repository-governance` owns governance changes. Actual API checks confirm public visibility, main, issues enabled and private vulnerability reporting enabled. Local checks cover links/fences/newlines/frontmatter, ignore samples, bounded credential-pattern scan and author identity. Author/committer is LaurensiusDani with GitHub noreply email and no Codex co-author. See [repository runbook](../runbooks/REPOSITORY_GOVERNANCE.md) for actual PR/settings evidence and deferred checks. No app tooling/CI/cloud deployment is claimed. Keep `in_review` until maintainer/default-branch template verification; M0 is not complete.
+- **M0-01 governance completed (2026-11-07):** Public [repository](https://github.com/LaurensiusDani/PotholesMap), explicit MIT selection, governance documents/templates and local ignore/structure/credential-pattern checks. [PR #2](https://github.com/LaurensiusDani/PotholesMap/pull/2) squash-merged with explicit maintainer authorization as `1facfab29a03577da68ac665f1d941c5af8f498e`; issue #1 closed. Remote settings, GFM rendering and active default-branch template registration verified; public browser README inspected. Signed-in chooser interaction was not observed because the verification browser was signed out; this limitation is explicit. Resulting author is LaurensiusDani; `web-flow` is GitHub's squash committer, no Codex co-author. See [repository runbook](../runbooks/REPOSITORY_GOVERNANCE.md). M0-01 is done; no application/CI/cloud deployment or whole-M0 completion is claimed.
 
-- **M0-02 local artifact (2026-11-04):** [Root agent contract](../../AGENTS.md) defines instruction sources, selected-issue scope, dependency exceptions, stop points, architecture/security rules, quality commands, Git/production boundaries and a sample bounded handoff. Documentation verification checks local plan links, balanced code fences, all 12 issue-ledger rows and agreement with the two canonical plans. Application tests are not applicable to this documentation change; app tooling has not been created. No Git repository, PR, remote CI or infrastructure evidence is claimed. Status remains `in_review` pending maintainer review and M0-01 governance reconciliation; M0 is not complete.
+- **M0-02 review (2026-11-07):** [Issue #3](https://github.com/LaurensiusDani/PotholesMap/issues/3), refined [AGENTS.md](../../AGENTS.md), CONTRIBUTING link and [scenario/workflow review](../runbooks/AGENT_CONTRACT_REVIEW.md). Covers kickoff/prerequisites, one-issue scope, author attribution, untrusted content, review/staging, authorization reuse, resume and stop rules. The review runbook records actual documentation verification and PR evidence; no app tooling or later issue implementation is introduced. Status remains `in_review` until maintainer review/merge.
+
+- **Historical M0-02 draft (2026-11-04):** The original local-only agent contract and documentation checks preceded Git/GitHub governance. This history is superseded for current status by the 2026-11-07 review above; it is not an additional incomplete prerequisite.
 
 **Maintainer / signoff date:** Not recorded. **M0 result:** Not verified complete.
 
